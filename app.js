@@ -6,7 +6,7 @@ const ejs = require("ejs");
 const lodash = require('lodash');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://admin-kamlesh:mistry@312@cluster0.tbtr6.mongodb.net/journalDB',{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.MONGO_DB_SERVER,{useNewUrlParser: true, useUnifiedTopology: true});
 
 const journalSchema = new mongoose.Schema({
   title: String,
